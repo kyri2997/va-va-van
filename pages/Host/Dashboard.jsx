@@ -91,7 +91,7 @@ export default function Dashboard() {
             <section className="host-dashboard-earnings">
                 <div className="info">
                     <h1>Welcome!</h1>
-                    <p>Income last <span>30 days</span></p>
+                    <p>Income from vans rented out, last <span>30 days</span></p>
                     <h2>$2,260</h2>
                 </div>
                 <Link to="income">Details</Link>
@@ -108,7 +108,7 @@ export default function Dashboard() {
             </section>
             <section className="host-dashboard-vans">
                 <div className="top">
-                    <h2>Your listed vans</h2>
+                    <h2>Your vans available to rent</h2>
                     <Link to="vans">View all</Link>
                 </div>
                 {

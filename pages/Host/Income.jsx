@@ -9,7 +9,7 @@ export default function Income() {
     ]
     return (
         <section className="host-income">
-            <h1>Income</h1>
+            <h1>Income from vans rented out</h1>
             <p>
                 Last <span>30 days</span>
             </p>
