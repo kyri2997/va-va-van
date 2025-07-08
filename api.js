@@ -99,14 +99,11 @@ export async function getHostVans() {
   const auth = getAuth();
   const user = auth.currentUser;
 
-  console.log("Current user:", user);
-
   if (!user) {
     throw new Error("User not authenticated");
   }
 
   const hostId = user.uid;
-  console.log("Fetching vans for hostId:", hostId);
 
   const q = query(vansCollectionRef, where("hostId", "==", hostId));
   const snapshot = await getDocs(q);
@@ -116,7 +113,6 @@ export async function getHostVans() {
     id: doc.id
   }));
 
-  console.log("Fetched vans:", vans);
 
   return vans;
 }
