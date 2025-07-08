@@ -35,19 +35,24 @@ export default function VanDetail() {
         loadVan()
     }, [id])
 
+    
     async function handleRentClick() {
   
 
         if (!user) {
             // Redirect to login, pass info to come back and save this van after login
-            navigate("/login", {
-                state: { from: `/vans/${id}`, addVanId: id }
-            })
+            // navigate("/login", {
+            //     state: { from: `/vans/${id}`, addVanId: id }
+            // })
+              alert(
+        "Registering your interest with the van owner. They'll get back to you with availability shortly."
+      );
+
         } else {
             // User is logged in, save van immediately
             try {
                 await saveVanForUser(id)
-                alert("Van added to your list!")
+                alert("Van is now available to rent!")
             } catch (err) {
                 alert("Failed to add van to your list. Please log in and try again.")
             }
@@ -85,7 +90,9 @@ export default function VanDetail() {
                     </p>
                     <p>{van.description}</p>
                     <button className="link-button" onClick={handleRentClick}>
-                        Rent this van
+                        {user
+                ? "Make this van available to rent"
+                : "Rent this van"}
                     </button>
                 </div>
             )}
