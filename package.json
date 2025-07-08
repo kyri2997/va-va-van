@@ -1,6 +1,6 @@
 {
-  "name": "Scrim-s04t8g7",
-  "description": "https://scrimba.com/frontend-path-c0j/~0149",
+  "name": "va-va-van",
+  "description": "Van rental platform, allowing users to rent vans and hosts to manage their listings.",
   "scripts": {
     "start": "vite",
     "dev": "vite",
