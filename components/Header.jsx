@@ -42,7 +42,7 @@ export default function Header() {
                     to="/host"
                     style={({ isActive }) => isActive ? activeStyles : null}
                 >
-                    Host
+                    Host Rentals
                 </NavLink>
                 <NavLink
                     to="/about"
